@@ -1,17 +1,17 @@
 {
-    "short_name":"Parser",
-    "name":"Parser",
-    "icons":[
-        {
-            "src":"Icon.png",
-            "type":"image/png",
-            "sizes":"192x192"
-        }
-    ],
-    "lang":"ja-JP",
-    "description":"Parserは,ファイルをbase64にエンコードするためのツールです。",
-    "display":"standalone",
-    "start_url":"?standalone=yes",
-    "background_color":"#333333",
-    "theme_color":"#333333"
+	"short_name":"Parser",
+	"name":"Parser",
+	"icons":[
+		{
+			"src":"Icon.png",
+			"type":"image/png",
+			"sizes":"192x192"
+		}
+	],
+	"lang":"ja-JP",
+	"description":"Parserは,ファイルをbase64にエンコードするためのツールです。",
+	"display":"standalone",
+	"start_url":"?standalone=yes",
+	"background_color":"#333333",
+	"theme_color":"#333333"
 }
