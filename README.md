@@ -1,5 +1,7 @@
 ## Parser
 
+![Parser](Icon.png "Parser")  
+
 Parserは,ファイルをBase64にエンコードするためのツールです。同時に,ファイルの内容を圧縮することもできます。
 
 ### 基本
@@ -30,10 +32,18 @@ JavaScript, Perlでも,文末を適切にセミコロン(;)で終止させてい
 - iOSのChromeでは適切に表示されない。
 
 ### シェルコマンド
-Parserをシェルコマンドから利用できるようなコードを書いた。以下の“ソースコード”のリンクを開いて表示されるリポジトリ内のCommandline/Parserに実行ファイルを配置した。Swiftで書いた為,おそらくmacOSでしか作動しないと思われる。
+Parserをシェルコマンドから利用できるようなコードを書いた。以下の“ソースコード”のリンクを開いて表示されるリポジトリ内のCommandline/Parserに実行ファイルを配置した。  
+Swift, Python, Ruby, Perl, PHP の各バージョンを用意した。どれも同じ使い方で同じように作動する。  
+Swiftで書かれたスクリプトはおそらくmacOSでしか作動しないと思われる。  
 #### 使い方
 ```Shell
-Parser [verb] [input] [output]
+Parser.swift [verb] [input] [output]         # Swift
+Parser [verb] [input] [output]               # コンパイル済みシェルコマンド (Swiftよりコンパイル)
+Parser.py [verb] [input] [output]            # Python
+Parser.rb [verb] [input] [output]            # Ruby
+Parser.pl [verb] [input] [output]            # Perl
+Parser.php [verb] [input] [output]           # PHP
+python3.7 Parser.pyc [verb] [input] [output] # Pythonコンパイルコード
 ```
 - `[verb]` : 実行アクション
 	* x : 何も変換しない
@@ -46,22 +56,23 @@ Parser [verb] [input] [output]
 #### 例
 ```Shell
 Parser c Original.html Compressed.html
-   # Original.htmlの内容を圧縮して,Compressed.htmlとして保存する
+# Original.htmlの内容を圧縮して,Compressed.htmlとして保存する
 ```
 #### コンパイル
-Swiftソースコードを添えているので,以下のコマンドで自分でもコンパイルできる。
+SwiftやPythonは自分でもコンパイルできる。  
 ```Shell
 cd Commandline
 swiftc -o Parser Parser.swift
+python3.7 -m compileall Parser.py
 ```
 
 ### 更新情報
-- Swiftで作成したシェルコマンドの追加
-- (エラーを起こさないように)より的確に圧縮できるように改良
+- Swiftのソースコードを一部修正
+- Swiftの他に,Python, Ruby, Perl, PHP のソースコードを追加
 
 ### 開く
-- [オンライン版](https://akimikimikimikimikimikimika.github.io/Parser/Parser.html "Triangleオンライン版")
-- [オフライン版](https://akimikimikimikimikimikimika.github.io/Parser/offline.html "Triangleオフライン版")
+- [オンライン版](https://akimikimikimikimikimikimika.github.io/Parser/Parser.html "Parserオンライン版")
+- [オフライン版](https://akimikimikimikimikimikimika.github.io/Parser/offline.html "Parserオフライン版")
 - [ソースコード (GitHub)](https://github.com/akimikimikimikimikimikimika/Parser/ "ソースコード")
 
 オンライン版では,全てのコンテンツを組み込み,常に最新の状態で利用できます。  

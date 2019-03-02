@@ -1,3 +1,4 @@
+#! /usr/bin/swift
 
 import Foundation
 import CoreServices
@@ -131,5 +132,5 @@ else if c>2 {
 else {
 	print("Not enough arguments!\n\n")
 	showHelp()
-	exit(0)
+	exit(1)
 }
