@@ -67,8 +67,9 @@ python3.7 -m compileall Parser.py
 ```
 
 ### 更新情報
+- Webアプリのレイアウトの一部修正
 - Swiftのソースコードを一部修正
-- Swiftの他に,Python, Ruby, Perl, PHP のソースコードを追加
+- Swiftの他に, Python, Ruby, Perl, PHP のソースコードを追加
 
 ### 開く
 - [オンライン版](https://akimikimikimikimikimikimika.github.io/Parser/Parser.html "Parserオンライン版")
