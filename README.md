@@ -34,7 +34,7 @@ JavaScript, Perlでも,文末を適切にセミコロン(;)で終止させてい
 ### シェルコマンド
 Parserをシェルコマンドから利用できるようなコードを書いた。以下の“ソースコード”のリンクを開いて表示されるリポジトリ内のCommandline/Parserに実行ファイルを配置した。  
 Swift, Python, Ruby, Perl, PHP の各バージョンを用意した。どれも同じ使い方で同じように作動する。  
-Swiftで書かれたスクリプトはおそらくmacOSでしか作動しないと思われる。  
+Swiftと,SwiftよりコンパイルしたファイルはおそらくmacOSでしか作動しないと思われる。  
 #### 使い方
 ```Shell
 Parser.swift [verb] [input] [output]         # Swift
@@ -67,8 +67,9 @@ python3.7 -m compileall Parser.py
 ```
 
 ### 更新情報
+- Webアプリのレイアウトの一部修正
 - Swiftのソースコードを一部修正
-- Swiftの他に,Python, Ruby, Perl, PHP のソースコードを追加
+- Swiftの他に, Python, Ruby, Perl, PHP のソースコードを追加
 
 ### 開く
 - [オンライン版](https://akimikimikimikimikimikimika.github.io/Parser/Parser.html "Parserオンライン版")
