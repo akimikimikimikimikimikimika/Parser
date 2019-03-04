@@ -37,12 +37,12 @@ sub compress {
 	$s=~s/ +xml:space=[\"']?preserve[\"']? +/ /gm;
 	$s=~s/ +xml:space=[\"']?preserve[\"']? *//gm;
 	foreach my $t (";",":",",","{","}") {
-		$s=~s/$t[\n\t ]*\n[\n\t ]*/$t/g;
+		$s=~s/$t[ \t\n\v\f\r]*[\n\v\f\r][ \t\n\v\f\r]*/$t/g;
 	}
 	$s=~s/  +/ /g;
 	$s=~s/^ //gm;
 	$s=~s/ $//gm;
-	$s=~s/[\t\n]+//g;
+	$s=~s/[\t\n\v\f\r]+//g;
 	$s=~s/> +/>/g;
 	return $s;
 }

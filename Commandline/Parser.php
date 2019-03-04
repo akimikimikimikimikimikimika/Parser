@@ -30,12 +30,12 @@ function compress($s) {
 	$s=preg_replace("/ +xml:space=[\"']?preserve[\"']? +/"," ",$s);
 	$s=preg_replace("/ +xml:space=[\"']?preserve[\"']? */","",$s);
 	foreach (array(";",":",",","{","}") as $t) {
-		$s=preg_replace("/${t}[\n\t ]*\n[\n\t ]*/",$t,$s);
+		$s=preg_replace("/${t}[ \t\n\v\f\r]*[\n\v\f\r][ \t\n\v\f\r]*/",$t,$s);
 	}
 	$s=preg_replace("/  +/"," ",$s);
 	$s=preg_replace("/^ /m","",$s);
 	$s=preg_replace("/ $/m","",$s);
-	$s=preg_replace("/[\t\n]+/","",$s);
+	$s=preg_replace("/[\t\n\v\f\r]+/","",$s);
 	$s=preg_replace("/> +/",">",$s);
 	return $s;
 }

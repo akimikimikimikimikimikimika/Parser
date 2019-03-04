@@ -53,7 +53,7 @@ func compress(_ s:String) -> String {
 	r=replace(r, "  +", " ")
 	r=replace(r, "^ ", "")
 	r=replace(r, " $", "")
-	r=replace(r, "[\\t\\n]+", "")
+	r=replace(r, "[\\t\\n\\r]+", "")
 	r=replace(r, "> +", ">")
 	return r
 }

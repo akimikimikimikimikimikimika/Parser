@@ -33,17 +33,19 @@ JavaScript, Perlでも,文末を適切にセミコロン(;)で終止させてい
 
 ### シェルコマンド
 Parserをシェルコマンドから利用できるようなコードを書いた。以下の“ソースコード”のリンクを開いて表示されるリポジトリ内のCommandline/Parserに実行ファイルを配置した。  
-Swift, Python, Ruby, Perl, PHP の各バージョンを用意した。どれも同じ使い方で同じように作動する。  
+Swift, Python, Ruby, Perl, PHP, Shell の各バージョンを用意した。どれも同じ使い方で同じように作動する。  
 Swiftと,SwiftよりコンパイルしたファイルはおそらくmacOSでしか作動しないと思われる。  
 #### 使い方
 ```Shell
-Parser.swift [verb] [input] [output]         # Swift
-Parser [verb] [input] [output]               # コンパイル済みシェルコマンド (Swiftよりコンパイル)
-Parser.py [verb] [input] [output]            # Python
-Parser.rb [verb] [input] [output]            # Ruby
-Parser.pl [verb] [input] [output]            # Perl
-Parser.php [verb] [input] [output]           # PHP
-python3.7 Parser.pyc [verb] [input] [output] # Pythonコンパイルコード
+cd Commandline                                 # カレントディレクトリをCommandlineにする
+./Parser.swift [verb] [input] [output]         # Swift
+./Parser [verb] [input] [output]               # コンパイル済みシェルコマンド (Swiftよりコンパイル)
+./Parser.py [verb] [input] [output]            # Python
+./Parser.rb [verb] [input] [output]            # Ruby
+./Parser.pl [verb] [input] [output]            # Perl
+./Parser.php [verb] [input] [output]           # PHP
+./Parser.sh [verb] [input] [output]            # Shell
+python3.7 Parser.pyc [verb] [input] [output]   # Pythonコンパイルコード
 ```
 - `[verb]` : 実行アクション
 	* x : 何も変換しない
@@ -55,7 +57,7 @@ python3.7 Parser.pyc [verb] [input] [output] # Pythonコンパイルコード
 - `[output]` : 変換した内容を保存するファイルのパス。指定しない場合は,標準出力する
 #### 例
 ```Shell
-Parser c Original.html Compressed.html
+./Parser c Original.html Compressed.html
 # Original.htmlの内容を圧縮して,Compressed.htmlとして保存する
 ```
 #### コンパイル
@@ -67,9 +69,8 @@ python3.7 -m compileall Parser.py
 ```
 
 ### 更新情報
-- Webアプリのレイアウトの一部修正
-- Swiftのソースコードを一部修正
-- Swiftの他に, Python, Ruby, Perl, PHP のソースコードを追加
+- 改行文字と同時に復帰文字,改ページ文字,垂直タブ文字も取り除かれるように, Webアプリ, Swift, Python, Ruby, Perl, PHP を修正
+- 新たに Shell のソースコードを追加
 
 ### 開く
 - [オンライン版](https://akimikimikimikimikimikimika.github.io/Parser/Parser.html "Parserオンライン版")

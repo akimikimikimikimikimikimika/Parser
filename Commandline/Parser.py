@@ -36,11 +36,11 @@ def compress(s):
 	s=re.sub(r" +xml:space=[\"']?preserve[\"']? +"," ",s)
 	s=re.sub(r" +xml:space=[\"']?preserve[\"']? *","",s)
 	for t in [";",":",",","{","}"]:
-		s=re.sub(re.compile("(?m)"+t+"[\\n\\t ]*\\n[\\n\\t ]*"),t,s)
+		s=re.sub(re.compile("(?m)"+t+"[ \\t\\n\\v\\f\\r]*[\\n\\v\\f\\r][ \\t\\n\\v\\f\\r]*"),t,s)
 	s=re.sub(r"  +"," ",s)
 	s=re.sub(r"(?m)^ ","",s)
 	s=re.sub(r"(?m) $","",s)
-	s=re.sub(r"[\t\n]+","",s)
+	s=re.sub(r"[\t\n\v\f\r]+","",s)
 	s=re.sub(r"> +",">",s)
 	return s
 

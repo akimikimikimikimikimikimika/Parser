@@ -32,12 +32,12 @@ def compress(s)
 	s=s.gsub(/ +xml:space=[\"']?preserve[\"']? +/," ");
 	s=s.gsub(/ +xml:space=[\"']?preserve[\"']? */,"");
 	[";",":",",","{","}"].each do |t|
-		s=s.gsub(/#{t}[\n\t ]*\n[\n\t ]*/,t);
+		s=s.gsub(/#{t}[ \t\n\v\f\r]*[\n\v\f\r][ \t\n\v\f\r]*/,t);
 	end
 	s=s.gsub(/  +/," ");
 	s=s.gsub(/^ /,"");
 	s=s.gsub(/ $/,"");
-	s=s.gsub(/[\t\n]+/,"");
+	s=s.gsub(/[\t\n\v\f\r]+/,"");
 	s=s.gsub(/> +/,">");
 	s;
 end
