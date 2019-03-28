@@ -31,20 +31,25 @@ JavaScript, Perlでも,文末を適切にセミコロン(;)で終止させてい
 - iPhone X 対応。
 - iOSのChromeでは適切に表示されない。
 
-### シェルコマンド
-Parserをシェルコマンドから利用できるようなコードを書いた。以下の“ソースコード”のリンクを開いて表示されるリポジトリ内のCommandline/Parserに実行ファイルを配置した。  
-Swift, Python, Ruby, Perl, PHP, Shell の各バージョンを用意した。どれも同じ使い方で同じように作動する。  
+### コマンド
+Parserをシェルから利用できるようなコードを書いた。以下の“ソースコード”のリンクを開いて表示されるリポジトリ内のCommandlineフォルダに幾つかの言語で書かれたParserのスクリプトと,コンパイルしたUnix実行ファイルを配置した。  
+Swift, Python, Ruby, Perl, PHP, Bash の各バージョンを用意した。どれも同じ使い方で同じように作動する。  
 Swiftと,SwiftよりコンパイルしたファイルはおそらくmacOSでしか作動しないと思われる。  
+
 #### 使い方
 ```Shell
+# ステップ1
 cd Commandline                                 # カレントディレクトリをCommandlineにする
+
+# ステップ2
+#   以下のうち,どれかを実行する
 ./Parser.swift [verb] [input] [output]         # Swift
-./Parser [verb] [input] [output]               # コンパイル済みシェルコマンド (Swiftよりコンパイル)
+./Parser [verb] [input] [output]               # コンパイル済みコマンド (Swiftよりコンパイル)
 ./Parser.py [verb] [input] [output]            # Python
 ./Parser.rb [verb] [input] [output]            # Ruby
 ./Parser.pl [verb] [input] [output]            # Perl
 ./Parser.php [verb] [input] [output]           # PHP
-./Parser.sh [verb] [input] [output]            # Shell
+./Parser.sh [verb] [input] [output]            # Bash
 python3.7 Parser.pyc [verb] [input] [output]   # Pythonコンパイルコード
 ```
 - `[verb]` : 実行アクション
@@ -69,8 +74,7 @@ python3.7 -m compileall Parser.py
 ```
 
 ### 更新情報
-- 改行文字と同時に復帰文字,改ページ文字,垂直タブ文字も取り除かれるように, Webアプリ, Swift, Python, Ruby, Perl, PHP を修正
-- 新たに Shell のソースコードを追加
+- Webアプリ のバグを修正
 
 ### 開く
 - [オンライン版](https://akimikimikimikimikimikimika.github.io/Parser/Parser.html "Parserオンライン版")

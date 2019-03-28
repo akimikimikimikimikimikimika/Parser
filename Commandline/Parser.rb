@@ -4,14 +4,20 @@
 require "base64";
 
 def showHelp()
-	print "\nUsage: parser [verb] [input file path] ([output file path])\n\n";
-	print "verb:\n";
-	print "   help: show this help\n";
-	print "   b: base64 encoding\n";
-	print "   c: compress\n";
-	print "   bc: both compressing and base64 encoding\n";
-	print "   x: neither compressing nor base64 encoding\n";
-	print "\n\n";
+	print """
+
+Usage: parser [verb] [input file path] ([output file path])
+
+verb:
+	help: show this help
+	b: base64 encoding
+	c: compress
+	bc: both compressing and base64 encoding
+	x: neither compressing nor base64 encoding
+
+
+
+""";
 end
 
 def omitComment(s,st,en)

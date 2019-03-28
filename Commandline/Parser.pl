@@ -4,14 +4,20 @@
 use MIME::Base64;
 
 sub showHelp {
-	print "\nUsage: parser [verb] [input file path] ([output file path])\n\n";
-	print "verb:\n";
-	print "   help: show this help\n";
-	print "   b: base64 encoding\n";
-	print "   c: compress\n";
-	print "   bc: both compressing and base64 encoding\n";
-	print "   x: neither compressing nor base64 encoding\n";
-	print "\n\n";
+	print <<"Help";
+
+Usage: parser [verb] [input file path] ([output file path])
+
+verb:
+   help: show this help
+   b: base64 encoding
+   c: compress
+   bc: both compressing and base64 encoding
+   x: neither compressing nor base64 encoding
+
+
+
+Help
 }
 
 sub omitComment {
@@ -70,6 +76,7 @@ elsif ($l>1) {
 		$md =~ /[a-z0-9\-\+]+\/[a-z0-9\-\+]+$/i;
 		my $m=$&;
 		open(F,"<",$inf);
+		if ($b && !$c) binmode(F);
 		$r=join("",<F>);
 		close(F);
 		if ($c) {

@@ -3,16 +3,20 @@
 data=""
 
 showHelp(){
-	echo
-	echo "Usage: parser [verb] [input file path] ([output file path])"
-	echo
-	echo "verb:"
-	echo "   help: show this help"
-	echo "   b: base64 encoding"
-	echo "   c: compress"
-	echo "   bc: both compressing and base64 encoding"
-	echo "   x: neither compressing nor base64 encoding"
-	echo
+	echo """
+
+Usage: parser [verb] [input file path] ([output file path])
+
+verb:
+   help: show this help
+   b: base64 encoding
+   c: compress
+   bc: both compressing and base64 encoding
+   x: neither compressing nor base64 encoding
+
+
+
+"""
 }
 
 omitComment(){

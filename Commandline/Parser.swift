@@ -4,14 +4,20 @@ import Foundation
 import CoreServices
 
 func showHelp(){
-	print("\nUsage: parser [verb] [input file path] ([output file path])\n")
-	print("verb:")
-	print("   help: show this help")
-	print("   b: base64 encoding")
-	print("   c: compress")
-	print("   bc: both compressing and base64 encoding")
-	print("   x: neither compressing nor base64 encoding")
-	print("\n")
+	print("""
+
+Usage: parser [verb] [input file path] ([output file path])
+
+verb:
+   help: show this help
+   b: base64 encoding
+   c: compress
+   bc: both compressing and base64 encoding
+   x: neither compressing nor base64 encoding
+
+
+
+""")
 }
 
 struct ParseOption {
